@@ -30,6 +30,7 @@ func _ready():
 		connect("food_action",node,"_check_food")
 		connect("guest_action",node,"_check_guest")
 		connect("add_score",node,"_add_score")
+		connect("reduce_score",node,"_reduce_score")
 	#current_state = STATE[1]
 	pass # Replace with function body.
 
@@ -96,6 +97,7 @@ func _on_Area2D_body_entered(body):
 			else:
 				set_current_food("")
 				print("you delivered the wrong thing...")
+				emit_signal("reduce_score")
 		else:
 			print(body," is not requested group - ",group)
 	pass # Replace with function body.

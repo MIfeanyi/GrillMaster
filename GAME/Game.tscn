@@ -19,7 +19,7 @@ script = ExtResource( 1 )
 [node name="GameUI" parent="World" instance=ExtResource( 3 )]
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 363.199, 341.659 )
+position = Vector2( 253.199, 444.739 )
 
 [node name="Chef" type="Node" parent="."]
 

@@ -14,6 +14,8 @@ func _check_food(f):
 
 func _add_score():
 	$World/GameUI.add_score()
+func _reduce_score():
+	$World/GameUI.reduce_score()
 
 func _check_guest(f,g):
 	print(f, " given to ",g)

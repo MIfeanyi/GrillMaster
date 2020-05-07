@@ -9,6 +9,8 @@ var score = 0
 
 func add_score():
 	score = score + 100
+func reduce_score():
+	score = score - 200
 
 func _ready():
 	pass # Replace with function body.
