@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GAME/Game.gd" type="Script" id=1]
 [ext_resource path="res://GAME/World/Background.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://GAME/Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GAME/food/Food.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GAME/guest.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GAME/chef/Chef.tscn" type="PackedScene" id=7]
 
 [node name="Game" type="Node" groups=[
 "game",
@@ -20,8 +21,6 @@ script = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 253.199, 444.739 )
-
-[node name="Chef" type="Node" parent="."]
 
 [node name="Food" type="Node" parent="."]
 
@@ -42,6 +41,7 @@ position = Vector2( 329.293, 547.453 )
 current_food = "riceball"
 
 [node name="Guests" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Guest" parent="Guests" instance=ExtResource( 6 )]
 position = Vector2( 77.7824, 209.19 )
@@ -52,3 +52,6 @@ position = Vector2( 68.8506, 93.0752 )
 
 [node name="Guest3" parent="Guests" instance=ExtResource( 6 )]
 position = Vector2( 86.5367, 349.259 )
+
+[node name="Chef" parent="." instance=ExtResource( 7 )]
+position = Vector2( 488, 93 )
