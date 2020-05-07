@@ -4,6 +4,7 @@ extends KinematicBody2D
 signal food_action
 signal guest_action
 signal add_score
+signal reduce_score
 
 export (String, "IDLE","PICKUP","DROPPOFF") var STATE
 export (String, "PORK", "FISH","BEER") var CURRENT_FOOD
@@ -83,15 +84,18 @@ func _physics_process(delta):
 func _on_Area2D_body_entered(body):
 	for group in body.get_groups():
 		if group=="food":
-			set_current_food(body.current_food)
-			#emit_signal("food_action")
-			print(body.current_food," food selected.")
+			if body.gui_item ==false:
+				set_current_food(body.current_food)
+				#emit_signal("food_action")
+				print(body.current_food," food selected.")
 		elif group =="guest":
-			if body.current_food =="":
+			if body.current_food =="" and body.requested_food == current_food:
 				emit_signal("add_score")
 				body.current_food = current_food
 				set_current_food("")
-			pass
+			else:
+				set_current_food("")
+				print("you delivered the wrong thing...")
 		else:
 			print(body," is not requested group - ",group)
 	pass # Replace with function body.
