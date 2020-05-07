@@ -25,4 +25,9 @@ wait_time = 5.0
 
 [node name="Food" parent="." instance=ExtResource( 3 )]
 position = Vector2( -29.9287, 30.8089 )
+gui_item = true
+
+[node name="RequestedFood" parent="." instance=ExtResource( 3 )]
+request_box = true
+gui_item = true
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
