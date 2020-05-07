@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GAME/Game.gd" type="Script" id=1]
+[ext_resource path="res://GAME/World/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GAME/World/GameUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GAME/Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GAME/food/Food.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GAME/guest.tscn" type="PackedScene" id=6]
+
+[node name="Game" type="Node" groups=[
+"game",
+]]
+script = ExtResource( 1 )
+
+[node name="World" type="Node" parent="."]
+
+[node name="Background" parent="World" instance=ExtResource( 2 )]
+
+[node name="GameUI" parent="World" instance=ExtResource( 3 )]
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 490.699, 331.659 )
+SPEED = 3000
+
+[node name="Grill" type="Node" parent="."]
+
+[node name="Food" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="Chicken" parent="Food" instance=ExtResource( 5 )]
+position = Vector2( 551.234, 310.506 )
+current_food = "chicken"
+
+[node name="Beer" parent="Food" instance=ExtResource( 5 )]
+position = Vector2( 551.984, 122.798 )
+current_food = "beer"
+
+[node name="Fish" parent="Food" instance=ExtResource( 5 )]
+position = Vector2( 553.649, 483.051 )
+current_food = "fish"
+
+[node name="Riceball" parent="Food" instance=ExtResource( 5 )]
+position = Vector2( 329.293, 547.453 )
+current_food = "riceball"
+
+[node name="Guests" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="Guest" parent="Guests" instance=ExtResource( 6 )]
+position = Vector2( 77.7824, 209.19 )
+eat_time = 1
+
+[node name="Guest2" parent="Guests" instance=ExtResource( 6 )]
+position = Vector2( 68.8506, 93.0752 )
+
+[node name="Guest3" parent="Guests" instance=ExtResource( 6 )]
+position = Vector2( 86.5367, 349.259 )
