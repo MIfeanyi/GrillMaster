@@ -87,8 +87,9 @@ func _on_Area2D_body_entered(body):
 		if group=="food":
 			if body.gui_item ==false:
 				set_current_food(body.current_food)
-				#emit_signal("food_action")
 				print(body.current_food," food selected.")
+				if body.chef_item:
+					body.set_current_food("")
 		elif group =="guest":
 			if body.current_food =="" and body.requested_food == current_food:
 				emit_signal("add_score")

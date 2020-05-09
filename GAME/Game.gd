@@ -8,6 +8,17 @@ extends Node
 func _ready():
 	pass # Replace with function body.
 
+func _cook_food(f):
+	print("Cooking: ", f)
+	for food in get_tree().get_nodes_in_group("food"):
+		if food.chef_item == true:
+			if food.current_food =="":
+				food.set_current_food(f)
+				print("empty slot for ",f)
+				return
+			else:
+				print("Currently holding:", food.current_food)
+	pass
 func _check_food(f):
 	print("we will check if the player is picking up a plate/dropping off.")
 	pass
