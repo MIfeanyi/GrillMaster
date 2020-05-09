@@ -3,6 +3,7 @@ extends KinematicBody2D
 export (String) var current_food = ""
 export (bool) var request_box = false
 export (bool) var gui_item = false
+export (bool) var chef_item = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if request_box ==true:
@@ -11,6 +12,7 @@ func _ready():
 		$fish.set_visible(false)
 		$chicken.set_visible(false)
 		$beer.set_visible(false)
+		$riceball.set_visible(false)
 	elif current_food =="fish":
 		$fish.set_visible(true)
 	elif current_food=="chicken":
@@ -29,6 +31,7 @@ func set_current_food(f):
 		$fish.set_visible(false)
 		$chicken.set_visible(false)
 		$beer.set_visible(false)
+		$riceball.set_visible(false)
 	elif current_food =="fish":
 		$fish.set_visible(true)
 	elif current_food=="chicken":

@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GAME/chef/ChefUI.gd" type="Script" id=1]
+
+[node name="ChefUI" type="HBoxContainer"]
+margin_left = -1.16635
+margin_top = 557.333
+margin_right = 601.834
+margin_bottom = 599.333
+size_flags_horizontal = 0
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+alignment = 1
+script = ExtResource( 1 )
+
+[node name="Beer" type="Button" parent="."]
+margin_left = 193.0
+margin_right = 235.0
+margin_bottom = 42.0
+text = "Beer"
+
+[node name="Chicken" type="Button" parent="."]
+margin_left = 239.0
+margin_right = 301.0
+margin_bottom = 42.0
+text = "Chicken"
+
+[node name="Fish" type="Button" parent="."]
+margin_left = 305.0
+margin_right = 343.0
+margin_bottom = 42.0
+text = "Fish"
+
+[node name="Riceball" type="Button" parent="."]
+margin_left = 347.0
+margin_right = 409.0
+margin_bottom = 42.0
+text = "Riceball"
+[connection signal="pressed" from="Beer" to="." method="_on_Beer_pressed"]
+[connection signal="pressed" from="Chicken" to="." method="_on_Chicken_pressed"]
+[connection signal="pressed" from="Fish" to="." method="_on_Fish_pressed"]
+[connection signal="pressed" from="Riceball" to="." method="_on_Riceball_pressed"]

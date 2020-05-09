@@ -1,54 +1,64 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://GAME/Game.gd" type="Script" id=1]
 [ext_resource path="res://GAME/World/Background.tscn" type="PackedScene" id=2]
-[ext_resource path="res://GAME/World/GameUI.tscn" type="PackedScene" id=3]
-[ext_resource path="res://GAME/Player/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://GAME/food/Food.tscn" type="PackedScene" id=5]
-[ext_resource path="res://GAME/guest.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GAME/Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GAME/food/Food.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GAME/guest.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GAME/chef/Chef.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GAME/World/GameUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://GAME/chef/ChefUI.tscn" type="PackedScene" id=8]
 
 [node name="Game" type="Node" groups=[
 "game",
 ]]
 script = ExtResource( 1 )
 
-[node name="World" type="Node" parent="."]
+[node name="Background" parent="." instance=ExtResource( 2 )]
+visible = false
 
-[node name="Background" parent="World" instance=ExtResource( 2 )]
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 177.355, 216.204 )
 
-[node name="GameUI" parent="World" instance=ExtResource( 3 )]
+[node name="Food" type="Node" parent="." groups=[
+"Plates",
+]]
 
-[node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 253.199, 444.739 )
+[node name="Chicken" parent="Food" instance=ExtResource( 4 )]
+position = Vector2( 431.651, 157.44 )
+chef_item = true
 
-[node name="Chef" type="Node" parent="."]
+[node name="Beer" parent="Food" instance=ExtResource( 4 )]
+position = Vector2( 432.401, 94.0981 )
+chef_item = true
 
-[node name="Food" type="Node" parent="."]
+[node name="Fish" parent="Food" instance=ExtResource( 4 )]
+position = Vector2( 434.066, 219.969 )
+chef_item = true
 
-[node name="Chicken" parent="Food" instance=ExtResource( 5 )]
-position = Vector2( 551.234, 310.506 )
-current_food = "chicken"
-
-[node name="Beer" parent="Food" instance=ExtResource( 5 )]
-position = Vector2( 551.984, 122.798 )
-current_food = "beer"
-
-[node name="Fish" parent="Food" instance=ExtResource( 5 )]
-position = Vector2( 553.649, 483.051 )
-current_food = "fish"
-
-[node name="Riceball" parent="Food" instance=ExtResource( 5 )]
-position = Vector2( 329.293, 547.453 )
-current_food = "riceball"
+[node name="Riceball" parent="Food" instance=ExtResource( 4 )]
+position = Vector2( 434.526, 281.979 )
+chef_item = true
 
 [node name="Guests" type="Node" parent="."]
+editor/display_folded = true
 
-[node name="Guest" parent="Guests" instance=ExtResource( 6 )]
+[node name="Guest" parent="Guests" instance=ExtResource( 5 )]
 position = Vector2( 77.7824, 209.19 )
 eat_time = 1
 
-[node name="Guest2" parent="Guests" instance=ExtResource( 6 )]
+[node name="Guest2" parent="Guests" instance=ExtResource( 5 )]
 position = Vector2( 68.8506, 93.0752 )
 
-[node name="Guest3" parent="Guests" instance=ExtResource( 6 )]
+[node name="Guest3" parent="Guests" instance=ExtResource( 5 )]
 position = Vector2( 86.5367, 349.259 )
+
+[node name="Chef" parent="." instance=ExtResource( 6 )]
+position = Vector2( 488, 93 )
+
+[node name="World" type="Node" parent="."]
+
+[node name="GameUI" parent="World" instance=ExtResource( 7 )]
+visible = false
+
+[node name="ChefUI" parent="World" instance=ExtResource( 8 )]
