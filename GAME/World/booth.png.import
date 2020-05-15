@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player.png-b90e1afcf9f1820aa96cc1040faa9855.stex"
+path="res://.import/booth.png-95e0755d9231dd2fed36de6abd8302f4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GAME/Player/player.png"
-dest_files=[ "res://.import/player.png-b90e1afcf9f1820aa96cc1040faa9855.stex" ]
+source_file="res://GAME/World/booth.png"
+dest_files=[ "res://.import/booth.png-95e0755d9231dd2fed36de6abd8302f4.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
