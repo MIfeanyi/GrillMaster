@@ -20,7 +20,7 @@ __meta__ = {
 [node name="Background" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 328.55, 136.3 )
+position = Vector2( 328.55, 148.8 )
 scale = Vector2( 2, 2 )
 
 [node name="Chef" parent="." instance=ExtResource( 6 )]

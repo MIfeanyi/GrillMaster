@@ -1,4 +1,3 @@
-tool
 extends KinematicBody2D
 
 signal food_action
