@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Grill Master"
-run/main_scene="res://GAME/Game.tscn"
+run/main_scene="res://GAME/Menu.tscn"
 boot_splash/image="res://GAME/World/Diner_sign.png"
 config/icon="res://icon.png"
 
