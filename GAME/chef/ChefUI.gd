@@ -9,9 +9,20 @@ func _ready():
 		pass
 	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func input():
+	if Input.is_action_just_pressed("ui_beer"):
+		_on_Beer_pressed()
+	if Input.is_action_just_pressed("ui_chicken"):
+		_on_Chicken_pressed()
+	if Input.is_action_just_pressed("ui_fish"):
+		_on_Fish_pressed()
+	if Input.is_action_just_pressed("ui_riceball"):
+		_on_Riceball_pressed()
+		pass
+
+func _process(delta):
+	input()
+	pass
 
 
 func _on_Beer_pressed():

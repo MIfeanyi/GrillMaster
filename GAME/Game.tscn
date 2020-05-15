@@ -13,52 +13,63 @@
 "game",
 ]]
 script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="Background" parent="." instance=ExtResource( 2 )]
-visible = false
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 177.355, 216.204 )
+position = Vector2( 328.55, 148.8 )
+scale = Vector2( 2, 2 )
+
+[node name="Chef" parent="." instance=ExtResource( 6 )]
+position = Vector2( 550.477, 52.4832 )
+scale = Vector2( 2, 2 )
 
 [node name="Food" type="Node" parent="." groups=[
 "Plates",
 ]]
 
 [node name="Chicken" parent="Food" instance=ExtResource( 4 )]
-position = Vector2( 431.651, 157.44 )
+position = Vector2( 512.107, 191.823 )
+scale = Vector2( 2, 2 )
 chef_item = true
 
 [node name="Beer" parent="Food" instance=ExtResource( 4 )]
-position = Vector2( 432.401, 94.0981 )
+position = Vector2( 512.974, 122.593 )
+scale = Vector2( 2, 2 )
 chef_item = true
 
 [node name="Fish" parent="Food" instance=ExtResource( 4 )]
-position = Vector2( 434.066, 219.969 )
+position = Vector2( 510.73, 261.612 )
+scale = Vector2( 2, 2 )
 chef_item = true
 
 [node name="Riceball" parent="Food" instance=ExtResource( 4 )]
-position = Vector2( 434.526, 281.979 )
+position = Vector2( 512.19, 323.892 )
+scale = Vector2( 2, 2 )
 chef_item = true
 
 [node name="Guests" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Guest" parent="Guests" instance=ExtResource( 5 )]
-position = Vector2( 77.7824, 209.19 )
+position = Vector2( 115.388, 274.538 )
+scale = Vector2( 2, 2 )
 eat_time = 1
 
 [node name="Guest2" parent="Guests" instance=ExtResource( 5 )]
-position = Vector2( 68.8506, 93.0752 )
+position = Vector2( 114.561, 93.0752 )
+scale = Vector2( 2, 2 )
+eat_time = 10
 
 [node name="Guest3" parent="Guests" instance=ExtResource( 5 )]
-position = Vector2( 86.5367, 349.259 )
-
-[node name="Chef" parent="." instance=ExtResource( 6 )]
-position = Vector2( 488, 93 )
+position = Vector2( 123.184, 445.097 )
+scale = Vector2( 2, 2 )
+eat_time = 15
 
 [node name="World" type="Node" parent="."]
 
 [node name="GameUI" parent="World" instance=ExtResource( 7 )]
-visible = false
 
 [node name="ChefUI" parent="World" instance=ExtResource( 8 )]

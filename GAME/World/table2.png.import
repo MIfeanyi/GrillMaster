@@ -2,19 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player.png-b90e1afcf9f1820aa96cc1040faa9855.stex"
+path="res://.import/table2.png-fea979893c12c28248703964b20f719c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GAME/Player/player.png"
-dest_files=[ "res://.import/player.png-b90e1afcf9f1820aa96cc1040faa9855.stex" ]
+source_file="res://GAME/World/table2.png"
+dest_files=[ "res://.import/table2.png-fea979893c12c28248703964b20f719c.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=3
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
