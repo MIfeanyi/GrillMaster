@@ -85,19 +85,21 @@ func _on_Area2D_body_entered(body):
 	for group in body.get_groups():
 		if group=="food":
 			if body.gui_item ==false:
-				set_current_food(body.current_food)
-				print(body.current_food," food selected.")
-				if body.chef_item:
-					body.set_current_food("")
+				if current_food =="":
+					set_current_food(body.current_food)
+					print(body.current_food," food selected.")
+					if body.chef_item:
+						body.set_current_food("")
 		elif group =="guest":
 			if body.current_food =="" and body.requested_food == current_food:
 				emit_signal("add_score")
 				body.current_food = current_food
 				set_current_food("")
 			else:
-				set_current_food("")
-				print("you delivered the wrong thing...")
-				emit_signal("reduce_score")
+				if current_food !="":
+					set_current_food("")
+					print("you delivered the wrong thing...")
+					emit_signal("reduce_score")
 		else:
 			print(body," is not requested group - ",group)
 	pass # Replace with function body.
